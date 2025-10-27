@@ -158,6 +158,15 @@ metadata:
 stringData:
   apiKey: <change-me>
 type: Opaque
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: granite-3-3-8b-instruct
+  namespace: llama-stack
+stringData:
+  apiKey: <change-me>
+type: Opaque
 
 ---
 kind: Secret
@@ -254,6 +263,13 @@ data:
           max_tokens: 110000
           api_token: ${env.LLAMA_4_SCOUT_17B_16E_W4A16_API_TOKEN}
           tls_verify: true
+      - provider_id: vllm-granite-3.3-8b-instruct
+        provider_type: "remote::vllm"
+        config:
+          url: "https://granite-3-3-8b-instruct-maas-apicast-production.apps.prod.rhoai.rh-aiservices-bu.com:443/v1"
+          max_tokens: 110000
+          api_token: ${env.GRANITE_3_3_8B_INSTRUCT_API_TOKEN}
+          tls_verify: true
       tool_runtime:
       - config: {}
         provider_id: rag-runtime
@@ -271,6 +287,11 @@ data:
         model_id: llama-3-2-3b
         provider_id: vllm-llama-3-2-3b
         provider_model_id: llama-3-2-3b
+        model_type: llm
+      - metadata: {}
+        model_id: granite-3.3-8b-instruct
+        provider_id: vllm-granite-3.3-8b-instruct
+        provider_model_id: granite-3-3-8b-instruct
         model_type: llm
       - metadata: {}
         model_id: llama-4-scout-17b-16e-w4a16
@@ -343,6 +364,11 @@ spec:
           secretKeyRef:
             key: apiKey
             name: llama-3-2-3b
+      - name: GRANITE_3_3_8B_INSTRUCT_API_TOKEN
+        valueFrom:
+          secretKeyRef:
+            key: apiKey
+            name: granite-3-3-8b-instruct
       - name: LLAMA_4_SCOUT_17B_16E_W4A16_API_TOKEN
         valueFrom:
           secretKeyRef:
