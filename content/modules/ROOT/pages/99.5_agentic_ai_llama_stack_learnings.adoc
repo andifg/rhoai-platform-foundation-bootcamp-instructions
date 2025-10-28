@@ -1,0 +1,15 @@
+= *Lab Guide: Exploring Agentic AI using LlamaStack Playground*
+:stem: latexmath
+:icons: font
+:source-highlighter: highlight.js
+
+== Learning Summary
+
+- Llama stack is by its core a unified API layer for Inference, RAG, Agents, Tools, Safety, Evals.
+- Llama stack offers OpenAI compatible APIs
+- Llama stack server is preconfigured via a yaml config file.
+- Llama stack comes with an included agent framework but can also be used with any agentic framework.
+
+
+- Agentic AI is based on Models taking decisions which external tools to use for solving a user prompt.
+- The success of the system highly depending on the model, the agentic framework as well as the system prompts. 

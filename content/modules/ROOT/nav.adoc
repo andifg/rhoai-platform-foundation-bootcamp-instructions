@@ -64,6 +64,7 @@
     ** 37. xref:97_agentic_ai_llama_stack_introduction.adoc[Introduction & Setup]
     ** 38. xref:98_agentic_ai_llama_stack_notebook_agents.adoc[Agentic AI Agents with Llama Stack Clients]
     ** 39. xref:99_agentic_ai_llama_stack_playground.adoc[Llama Stack Playground]
+    ** 40. xref:99.5_agentic_ai_llama_stack_learnings.adoc[Learning Summary]
 
-* 40. xref:110_useful_tips.adoc[Useful Tips]
-* 41. xref:111_syncing_fork.adoc[Syncing Forked Project]
+* 41. xref:110_useful_tips.adoc[Useful Tips]
+* 42. xref:111_syncing_fork.adoc[Syncing Forked Project]
